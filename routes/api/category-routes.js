@@ -53,7 +53,6 @@ router.put('/:id', async (req, res) => {
   try {
     // mimic the post method for the id?
     const categoryData = await Category.update(req.body, {
-      category_name = req.body.category_name,
       where: { id: req.params.id },
     })
     // this is going to throw successful status and then print out the updated json
